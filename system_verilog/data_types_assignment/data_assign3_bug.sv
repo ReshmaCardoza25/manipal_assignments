@@ -1,4 +1,4 @@
-/************************************************************************
+o/************************************************************************
 Author: Mirafra Technologies Pvt Limited
         By Priya Ananthakrishnan
 Filename:	data_assign3_bug.sv  
@@ -14,8 +14,8 @@ int packet = 10;
 initial 
   begin  
     //Declaring the size of the dynamic array   
-    arr[i] = new[2];
-    arr[i] = new[3] (arr[i]);  
+    arr = new[2];
+    arr = new[3] (arr[i]);  
 
     //Assigning values to the array 
     foreach(arr[i])
@@ -26,3 +26,8 @@ initial
       end
     end
 endmodule
+
+Output:
+# arr[0] =15
+# arr[1] =20
+# arr[2] =25
